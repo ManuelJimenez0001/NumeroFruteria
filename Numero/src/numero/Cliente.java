@@ -21,8 +21,8 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Nombre=" + nombre + "\n"
-                + "Edad=" + edad  + "\n"
+        return "Nombre:....." + nombre + "\n"
+                + "Edad:...." + edad  +  "\n"
                 ;
     }
 
