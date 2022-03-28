@@ -17,4 +17,12 @@ public class Cola {
         Cola= new ArrayList();
         
     }
+    public void nuevoCliente(Cliente a){
+        Cola.add(a);
+    }
+
+    @Override
+    public String toString() {
+        return "Cola=" + Cola ;
+    }
 }
