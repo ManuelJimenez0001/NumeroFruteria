@@ -20,9 +20,26 @@ public class Cola {
     public void nuevoCliente(Cliente a){
         Cola.add(a);
     }
-
+    
+    public void despacharCliente(){
+        Cola.remove(0);
+    }
     @Override
     public String toString() {
         return "Cola=" + Cola ;
+    }
+    
+    public static void main(String[] args) {
+        Cliente a= new Cliente("Juan luis",24);
+        Cliente b= new Cliente("MARISA",56);
+        Cola cola= new Cola();
+        cola.nuevoCliente(a);
+        cola.nuevoCliente(b);
+        System.out.println(cola);
+        cola.despacharCliente();
+        System.out.println(cola);
+        cola.despacharCliente();
+        System.out.println(cola);
+    
     }
 }
