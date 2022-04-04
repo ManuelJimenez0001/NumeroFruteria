@@ -45,6 +45,17 @@ public class Menu {
         System.out.println("Boton 9: Preferencia Mayores");
         System.out.println("Boton 10: Salir");
         
+        Cliente a= new Cliente("Juan luis",24);
+        Cliente b= new Cliente("MARISA",56);
+        Cola cola= new Cola();
+        cola.nuevoCliente(a);
+        cola.nuevoCliente(b);
+        System.out.println(cola);
+        cola.despacharCliente();
+        System.out.println(cola);
+        cola.despacharCliente();
+        System.out.println(cola);
+        
         
         switch(numero){
             case añadirCliente:
