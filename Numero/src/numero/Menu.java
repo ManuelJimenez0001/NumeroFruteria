@@ -45,6 +45,47 @@ public class Menu {
         System.out.println("Boton 9: Preferencia Mayores");
         System.out.println("Boton 10: Salir");
         
+        
+        switch(numero){
+            case añadirCliente:
+                System.out.println("Cliente añadido");
+                break;
+                
+            case atenderCliente:
+                System.out.println("Cliente atendido");
+                break;
+                
+            case eliminarCliente:
+                System.out.println("Cliente eliminado");
+                break;
+                
+            case avanzar:
+                System.out.println("Cliente avanza una posicion");
+                break;
+                
+            case retrasar:
+                System.out.println("Cliente retrasa una posicion");
+                break;
+                
+            case pasarCliente:
+                System.out.println("Dejas pasar un cliente");
+                break;
+                
+            case noAtendidos:
+                System.out.println("Estos clientes no han sido atendidos");
+                break;
+                
+            case atendidos:
+                System.out.println("Estos clientes han sido atendidos");
+                break;
+                
+            case mayores:
+                System.out.println("Has sido buen ciudadano y has dejado pasar a una persona mayor");
+                break;
+                
+            case salir:
+                break;
+        }
       }
         
     }
