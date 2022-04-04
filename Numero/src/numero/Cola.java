@@ -32,14 +32,5 @@ public class Cola {
         return "Cola=" + Cola ;
     }
     
-    public static void main(String[] args) {
-        Cliente a= new Cliente("Juan luis",24);
-        Cliente b= new Cliente("MARISA",56);
-        Cola cola= new Cola();
-        cola.nuevoCliente(a);
-        cola.nuevoCliente(b);
-        
-        
     
-    }
 }
