@@ -22,7 +22,10 @@ public class Cola {
     }
     
     public void despacharCliente(){
-        Cola.remove(0);
+        if(Cola.get(0)!=null){
+            Cola.remove(0);
+        }
+        
     }
     @Override
     public String toString() {
@@ -35,11 +38,8 @@ public class Cola {
         Cola cola= new Cola();
         cola.nuevoCliente(a);
         cola.nuevoCliente(b);
-        System.out.println(cola);
-        cola.despacharCliente();
-        System.out.println(cola);
-        cola.despacharCliente();
-        System.out.println(cola);
+        
+        
     
     }
 }
