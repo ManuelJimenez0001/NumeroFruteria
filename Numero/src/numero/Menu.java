@@ -11,12 +11,9 @@ import java.util.Scanner;
  * @author ManuJimenez
  */
 public class Menu {
-
     /**
      * @param args the command line arguments
-     */
-    
-        
+     */ 
     }
     
 
