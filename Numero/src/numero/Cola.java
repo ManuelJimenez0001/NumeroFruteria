@@ -11,37 +11,42 @@ import java.util.ArrayList;
  * @author Ángel.García
  */
 public class Cola {
+
     ArrayList Cola;
-    
-    public Cola(){
-        Cola= new ArrayList();
-        
+
+    public Cola() {
+        Cola = new ArrayList();
+
     }
-    public void nuevoCliente(Cliente a){
+
+    public void nuevoCliente(Cliente a) {
         Cola.add(a);
     }
-    
-    public void despacharCliente(){
-        if(Cola.get(0)!=null){
-        Cola.remove(0);
+
+    public void despacharCliente() {
+        if (Cola.get(0) != null) {
+            Cola.remove(0);
         }
     }
+
+    public void adelantarCliente(Cliente a) {
+
+        if (Cola.indexOf(a)!= 0 && Cola.contains(a)) {
+            int aux=Cola.indexOf(a);
+            Cola.remove(a);
+            Cola.add(aux-1, a);
+        }
+    }
+    public void atrasarCliente(Cliente a){
+        if (Cola.indexOf(a)!= Cola.size()-1 && Cola.contains(a)) {
+            int aux=Cola.indexOf(a);
+            Cola.remove(a);
+            Cola.add(aux+1, a);
+        }
+    }
+
     @Override
     public String toString() {
-        return "Cola=" + Cola ;
-    }
-    
-    public static void main(String[] args) {
-        Cliente a= new Cliente("Juan luis",24);
-        Cliente b= new Cliente("MARISA",56);
-        Cola cola= new Cola();
-        cola.nuevoCliente(a);
-        cola.nuevoCliente(b);
-        System.out.println(cola);
-        cola.despacharCliente();
-        System.out.println(cola);
-        cola.despacharCliente();
-        System.out.println(cola);
-    
+        return "" + Cola;
     }
 }
