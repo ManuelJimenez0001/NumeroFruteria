@@ -40,7 +40,7 @@ public class Menu {
 
             switch (numero) {
                 case 1:
-
+                    //añado texto
                     System.out.println("");
                     break;
                 case 2:
