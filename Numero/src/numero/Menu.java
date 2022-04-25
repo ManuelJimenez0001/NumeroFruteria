@@ -1,47 +1,57 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package numero;
 
 import java.util.Scanner;
 
-/**
- *
- * @author ManuJimenez
- */
 public class Menu {
-    /**
-     * @param args the command line arguments
-<<<<<<< HEAD
-     */
 
     public static void main(String[] args) {
 
-
-
+        //herramientas para el uso del programa
         Scanner scan = new Scanner(System.in);
-        int numero;
+
+        //variables necesarias
+        int numeroCola,edad,eliminar;
         boolean estado = true;
+        String nombre;
+
+        //necesitamos generar una cola para nuestro progama
+        Cola fruteria = new Cola();
+
+        //hacemos un bucle el cual nos permite elegir opciones hasta que le demos a salir, podriamos
+        //realizar un control de fallos por si el usuario se equivoca, lo cual haremos si nos da tiempo
 
         do {
+        //este es el menu que nos permite facilitar al usuario las opciones que tiene
             System.out.println("Menu fruteria");
             System.out.println("_______________");
-            System.out.println("1. Nuevo cliente");
-            System.out.println("2. Siguiente");
-            System.out.println("3. Salir de la cola");
-            System.out.println("4. Dejar pasar 1 posicion");
-            System.out.println("5. Adelantar 1 puesto");
-            System.out.println("6. Ver lista");
-            System.out.println("7. Salir");
-            System.out.println("");
+            System.out.println("1. Nuevo cliente");//nuevoCliente() ok
+            System.out.println("2. Atender");//despacharCliente() ok
+            System.out.println("3. Salir de la cola");//abandonar() ok 
+            System.out.println("4. Dejar pasar 1 posicion");//atrasarCliente()
+            System.out.println("5. Adelantar 1 puesto");//adelantarCliente()
+            System.out.println("6. Siguiente");//siguenteCliente()
+            System.out.println("7. Ver lista");//toString
+            System.out.println("8. Salir\n");
             System.out.print("Opcion = ");
-            numero = scan.nextInt();
+            numeroCola = scan.nextInt();
 
-            switch (numero) {
+            //comentamos el codigo para facilitar la incorporacion del codigo 
+            switch (numeroCola) {
                 case 1:
-                    //añado texto
-                    System.out.println("");
+                    //Añadimos un nuevo cliente a la lista
+                    System.out.println("Esta opcion añade clientes");
+
+                    //pedimos los datos del cliente
+                    //nombre
+                    System.out.println("Nombre del cliente: ");
+                    nombre = scan.next();
+                    //edad
+                    System.out.println("Edad del cliente: ");
+                    edad = scan.nextInt();
+                    
+                    //generamos un nuevo cliente en la lista segun los datos recogidos
+                    fruteria.nuevoCliente(new Cliente(nombre, edad));
+                    
                     break;
                 case 2:
 
