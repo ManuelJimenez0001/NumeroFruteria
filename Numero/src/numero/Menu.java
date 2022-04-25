@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
 package numero;
 
 import java.util.Scanner;
@@ -27,11 +31,12 @@ public class Menu {
             System.out.println("1. Nuevo cliente");//nuevoCliente() ok
             System.out.println("2. Atender");//despacharCliente() ok
             System.out.println("3. Salir de la cola");//abandonar() ok 
-            System.out.println("4. Dejar pasar 1 posicion");//atrasarCliente()
-            System.out.println("5. Adelantar 1 puesto");//adelantarCliente()
-            System.out.println("6. Siguiente");//siguenteCliente()
-            System.out.println("7. Ver lista");//toString
-            System.out.println("8. Salir\n");
+            System.out.println("4. Dejar pasar 1 posicion");//atrasarCliente() ok
+            System.out.println("5. Adelantar 1 puesto");//adelantarCliente() ok
+            System.out.println("6. Siguiente");//siguenteCliente() 
+            System.out.println("7. Lista no atendidos");//Mostrar no atendidos ok
+            System.out.println("8. Lista atendidos");//Mostrar atendidos ok
+            System.out.println("9. Salir\n");
             System.out.print("Opcion = ");
             numeroCola = scan.nextInt();
 
@@ -53,51 +58,89 @@ public class Menu {
                     fruteria.nuevoCliente(new Cliente(nombre, edad));
                     
                     break;
-                    
+
                 case 2:
                     //Atendemos al cliente que se encuentre en el primer lugar de la lista
-                    //y lo pasa a la lista de atendidos 
+                    //y lo pasa a la lista de atendidos
                     System.out.println("Atiende al primer cliente de la lista");
                     
                     //invocamos al metodo aplicado a nuestra cola
                     fruteria.despacharCliente();
                     
                     break;
-                    
+
                 case 3:
-                    //metodo que elimina al cliente seleccionado de la cola 
+                    //metodo que elimina al cliente seleccionado de la cola
                     System.out.println("Saca de la cola al cliente");
                     //pedimos el cliente a eliminar
                     System.out.println("Que numero de cliente desea eliminar: ");
                     eliminar = scan.nextInt();
                     
-                    //ejecutamos el metodo abandonar
+                    //ejecutamos el metodo
                     fruteria.abandonar(eliminar);
                     
                     break;
-                    
+
                 case 4:
-
+                    //Metodo que atrasa la posicion del cliente 
+                    System.out.println("Atrasa la posicion del cliente");
                     System.out.println("");
-                    break;
                     
+                    //Preguntamos por la posicion que desea atrasar
+                    System.out.println("¿Que posicion desea atrasar?");
+                    numeroCola=scan.nextInt();
+                    
+                    //Ejecucion del metodo
+                    fruteria.atrasarCliente(numeroCola);
+                    break;
+
                 case 5:
-
+                    //Metodo que adelanta la posicion del cliente 
+                    System.out.println("Adelanta la posicion del cliente");
                     System.out.println("");
-                    break;
                     
+                    //Preguntamos por la posicion que desea adelantar
+                    System.out.println("¿Que posicion desea adelantar?");
+                    numeroCola = scan.nextInt();
+                    
+                    //Ejecutamos el metodo
+                    fruteria.adelantarCliente(numeroCola);
+                    break;
+
                 case 6:
-
+                    //Metodo que avanzamos al siguiente cliente
+                    System.out.println("Hace que el segundo cliente de la lista sea ahora el primero");
                     System.out.println("");
+                    
+                    //Ejecucion del metodo
+                    fruteria.siguienteCliente();
+                    break;
+
+                case 7:
+                    //Metodo que muestra la lista de no atendidos
+                    System.out.println("Lista no atendidos");
+                    System.out.println("");
+                    
+                    //Ejecucion de metodo
+                    System.out.println(fruteria.MostrarNoAtendidos());
+                    break;
+
+                case 8:
+                    //Metodo que muestra la lista de atendidos
+                    System.out.println("Lista atendidos");
+                    System.out.println("");
+                    
+                    //Ejecucion de metodo
+                    System.out.println(fruteria.MostrarAtendidos());
                     break;
                     
-                case 7:
+                case 9:
                     //sale del programa
                     estado = false;
                     break;
-                    
+
                 default:
-                    System.out.println("Debe de introducir un numero del 1 al 7, muchas gracias.");
+                    System.out.println("Debe de introducir un numero del 1 al 7, muchas gracias.\n");
                     System.out.println("");
                     break;
 
