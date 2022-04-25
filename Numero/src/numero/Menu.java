@@ -65,8 +65,15 @@ public class Menu {
                     break;
                     
                 case 3:
-
-                    System.out.println("");
+                    //metodo que elimina al cliente seleccionado de la cola
+                    System.out.println("Saca de la cola al cliente");
+                    //pedimos el cliente a eliminar
+                    System.out.println("Que numero de cliente desea eliminar: ");
+                    eliminar = scan.nextInt();
+                    
+                    //ejecutamos el metodo
+                    fruteria.abandonar(eliminar);
+                    
                     break;
                     
                 case 4:
