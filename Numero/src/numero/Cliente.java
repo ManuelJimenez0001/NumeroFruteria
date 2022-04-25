@@ -1,34 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package numero;
 
-/**
- *
- * @author Usuario
- */
 public class Cliente {
+
     private String nombre;
     private int edad;
-    Boolean atendido = true;
+    public boolean atendido;
 
     public Cliente(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
+        this.atendido = false;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+
 
     @Override
     public String toString() {
-        return   nombre +" "
-                 + edad
-                ;
+        return this.nombre + " con " + this.edad + " años. ";
     }
-
-    
-    
-    
-    
-    
 }
+    
+
