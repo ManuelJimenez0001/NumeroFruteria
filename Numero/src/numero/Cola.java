@@ -68,6 +68,14 @@ public class Cola {
         Cola.remove(0);
         Cola.add(1, a);  
     }
+   //Muestra la cola de los clientes que ya han sido atendidos
+    public ArrayList<Cliente> MostrarNoAtendidos(){
+        return Cola;
+    }
+    //Muestra la cola de los clientes que no han sido atendidos
+    public ArrayList<Cliente> MostrarAtendidos(){
+        return atendidos;
+    }
     @Override
     public String toString() {
         return "" + Cola;
