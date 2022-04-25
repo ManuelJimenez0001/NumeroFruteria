@@ -44,7 +44,17 @@ public class Cola {
             Cola.add(aux+1, a);
         }
     }
-
+    
+    //le pasa una posicion por argumento y si esta en la cola ese cliente se va de la cola
+    public void abandonar(int a){
+            if(a<Cola.size()&& a>=0){
+                Cola.remove(a);
+                System.out.println("Cliente eliminado");
+            }else{
+                System.out.println("No existe esa posicion en la cola");
+            }
+    }
+    
     @Override
     public String toString() {
         return "" + Cola;
