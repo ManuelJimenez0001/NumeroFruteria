@@ -18,7 +18,7 @@ public class Cola {
 
     public Cola() {
         Cola = new ArrayList<Cliente>();
-        
+        atendidos= new ArrayList<Cliente>();
     }
     //se genera un cliente en la lisa de los no atendidos, si la persona es mayor de 65 año ocupara la primera posicion automaticamente
     public void nuevoCliente(Cliente a) {
