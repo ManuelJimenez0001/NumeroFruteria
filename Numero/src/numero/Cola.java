@@ -63,7 +63,7 @@ public class Cola {
             }
     }
     //siguienteCliente() cambia la primera posicion por la segunda 
-    public void siguienteCliente(){
+    public void siguienteCliente(){        
         Cliente a= Cola.get(0);
         Cola.remove(0);
         Cola.add(1, a);  
