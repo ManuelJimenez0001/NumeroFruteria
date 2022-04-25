@@ -37,20 +37,20 @@ public class Cola {
         }
     }
     //le pasa un cliente por argumento y lo mueve una posicion hacia delante en la cola
-    public void adelantarCliente(Cliente a) {
+    public void adelantarCliente(int a) {
 
-        if (Cola.indexOf(a)!= 0 && Cola.contains(a)) {
-            int aux=Cola.indexOf(a);
+        if(a<Cola.size()&& a>0) {
+            Cliente aux = Cola.get(a);
             Cola.remove(a);
-            Cola.add(aux-1, a);
+            Cola.add (a-1 , aux);
         }
     }
     //le pasa un cliente por argumento y lo mueve una posicion atras en la cola
-    public void atrasarCliente(Cliente a){
-        if (Cola.indexOf(a)!= Cola.size()-1 && Cola.contains(a)) {
-            int aux=Cola.indexOf(a);
+    public void atrasarCliente(int a){
+        if(a<Cola.size()&& a>=0) {
+            Cliente aux = Cola.get(a);
             Cola.remove(a);
-            Cola.add(aux+1, a);
+            Cola.add (a-1 , aux);
         }
     }
     //le pasa una posicion por argumento y si esta en la cola ese cliente se va de la cola
