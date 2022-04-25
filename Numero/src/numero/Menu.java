@@ -53,31 +53,42 @@ public class Menu {
                     fruteria.nuevoCliente(new Cliente(nombre, edad));
                     
                     break;
-                case 2:
-
                     
-                    System.out.println("");
+                case 2:
+                    //Atendemos al cliente que se encuentre en el primer lugar de la lista
+                    //y lo pasa a la lista de atendidos 
+                    System.out.println("Atiende al primer cliente de la lista");
+                    
+                    //invocamos al metodo aplicado a nuestra cola
+                    fruteria.despacharCliente();
+                    
                     break;
+                    
                 case 3:
 
                     System.out.println("");
                     break;
+                    
                 case 4:
 
                     System.out.println("");
                     break;
+                    
                 case 5:
 
                     System.out.println("");
                     break;
+                    
                 case 6:
 
                     System.out.println("");
                     break;
+                    
                 case 7:
                     //sale del programa
                     estado = false;
                     break;
+                    
                 default:
                     System.out.println("Debe de introducir un numero del 1 al 7, muchas gracias.");
                     System.out.println("");
