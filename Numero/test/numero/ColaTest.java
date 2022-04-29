@@ -14,7 +14,9 @@ import org.junit.Before;
  * @author Ángel.García
  */
 public class ColaTest {
-
+    Cliente manolo;
+    Cliente pepe ;
+    Cliente alberto;
     Cliente a;
     Cliente b;
     Cliente c;
@@ -24,6 +26,11 @@ public class ColaTest {
         a = new Cliente("manolo", 23);
         b = new Cliente("pedro", 15);
         c = new Cliente("sami", 19);
+        
+        manolo = new Cliente("manolo", 74);
+        pepe = new Cliente("pepe", 26);
+        alberto = new Cliente("alberto", 32);
+        
         cola = new Cola();
     }
 
@@ -78,10 +85,30 @@ public class ColaTest {
 
     @Test
     public void testAbandonar() {
+
+        
+        
+        cola.nuevoCliente(manolo);
+        cola.nuevoCliente(pepe);
+        cola.nuevoCliente(alberto);
+        cola.abandonar(0);
+        assertSame(cola.Cola.get(0),pepe);
+        
+        
     }
 
+    /**
+     * Test of siguienteCliente method, of class Cola.
+     */
     @Test
-    public void testSiguienteCliente() {
+    public void siguienteCliente() {
+        cola.nuevoCliente(manolo);
+        cola.nuevoCliente(pepe);
+        cola.nuevoCliente(alberto);
+        cola.siguienteCliente();
+        assertSame(cola.Cola.get(1),manolo);
+        
+        
     }
 
     @Test
