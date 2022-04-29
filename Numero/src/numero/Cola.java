@@ -51,10 +51,12 @@ public class Cola {
 
     //le pasa un cliente por argumento y lo mueve una posicion atras en la cola
     public void atrasarCliente(int a) {
-        if (a < Cola.size() && a >= 0) {
+        if (a+1 >= Cola.size()) {
+            
+        }else if(a>=0&&a<Cola.size()){
             Cliente aux = Cola.get(a);
             Cola.remove(a);
-            Cola.add(a - 1, aux);
+            Cola.add(a + 1, aux);
         }
     }
 
