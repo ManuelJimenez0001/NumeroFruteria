@@ -86,10 +86,18 @@ public class ColaTest {
 
     @Test
     public void testMostrarNoAtendidos(){
+        cola.nuevoCliente(a);
+        cola.nuevoCliente(b);
+        cola.nuevoCliente(c);
+        cola.MostrarNoAtendidos();
     }
 
     @Test
     public void testMostrarAtendidos(){
+        cola.nuevoCliente(a);
+        cola.nuevoCliente(b);
+        cola.nuevoCliente(c);
+        cola.MostrarAtendidos();
     }
 
     @Test
